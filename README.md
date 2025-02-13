@@ -42,3 +42,11 @@ The server offers two core tools:
   }
 }
 ```
+
+### Installing via Smithery
+
+To install Data Visualization Server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/mcp-server-vegalite):
+
+```bash
+npx -y @smithery/cli install mcp-server-vegalite --client claude
+```
