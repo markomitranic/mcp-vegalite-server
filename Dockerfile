@@ -30,9 +30,14 @@ WORKDIR /app
 
 # Copy the virtual environment from the build stage
 COPY --from=uv /app/.venv /app/.venv
+# Copy the uv executable from the build stage
+COPY --from=uv /usr/local/bin/uv /usr/local/bin/uv
+
+# Create logs directory
+RUN mkdir -p logs
 
 # Place executables in the environment at the front of the path
 ENV PATH="/app/.venv/bin:$PATH"
 
-# when running the container, add --output_type and a bind mount to the host's db file
+# when running the container, add --output-type and a bind mount to the host's db file
 ENTRYPOINT ["uv", "run", "mcp_server_vegalite"]

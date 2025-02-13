@@ -34,11 +34,24 @@ The server offers two core tools:
             "--directory",
             "/absolute/path/to/mcp-datavis-server",
             "run",
-            "mcp_server_datavis",
-            "--output_type",
+            "mcp_server_vegalite",
+            "--output-type",
             "png" # or "text"
         ]
     }
   }
 }
+```
+
+## Usage with uv
+
+```bash
+uv --directory /Users/markomitranic/Sites/mcp/mcp-vegalite-server run mcp_server_vegalite --output-type png
+```
+
+## Usage with Docker
+
+```bash
+docker build -t mcp-server-vegalite .
+docker run -i --rm mcp-server-vegalite --output-type png
 ```

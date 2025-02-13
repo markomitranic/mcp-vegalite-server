@@ -14,4 +14,4 @@ startCommand:
   commandFunction:
     # A function that produces the CLI command to start the MCP on stdio.
     |-
-    (config) => ({ command: 'uv', args: ['run', 'mcp_server_vegalite', '--output_type', config.outputType] })
+    (config) => ({ command: 'uv', args: ['run', 'mcp_server_vegalite', '--output-type', config.outputType] })

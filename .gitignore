@@ -1,4 +1,5 @@
 logs/*
+!logs/.gitkeep
 .env
 .venv
 src/mcp_server_vegalite/__pycache__
